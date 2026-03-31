@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Warrior Girls SC — Tactical Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Barlow Condensed', sans-serif;
+      background: #0a0a0a;
+      color: #f5f5f5;
+      min-height: 100vh;
+    }
+    .hero {
+      background: linear-gradient(180deg, rgba(220,38,38,0.15) 0%, transparent 60%), #0a0a0a;
+      border-bottom: 3px solid #DC2626;
+      padding: 40px 24px 32px;
+      text-align: center;
+    }
+    .badge {
+      width: 72px; height: 72px; border-radius: 50%;
+      background: #DC2626;
+      display: inline-flex; align-items: center; justify-content: center;
+      font-family: 'Oswald', sans-serif;
+      font-size: 36px; font-weight: 700; color: #fff;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 24px rgba(220,38,38,0.4);
+    }
+    .club-name {
+      font-size: 13px; font-weight: 700; color: #DC2626;
+      text-transform: uppercase; letter-spacing: 4px;
+      margin-bottom: 8px;
+    }
+    h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 40px; font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px; line-height: 1.1;
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      font-size: 16px; color: #888;
+      font-weight: 400; letter-spacing: 0.5px;
+    }
+    .cards {
+      padding: 32px 20px;
+      display: flex; flex-direction: column;
+      gap: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .card {
+      display: block;
+      background: linear-gradient(135deg, #141414 0%, #1a1a1a 100%);
+      border: 2px solid #222;
+      border-radius: 12px;
+      padding: 28px 24px;
+      text-decoration: none;
+      color: #f5f5f5;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 3px;
+      background: #DC2626;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      border-color: #DC2626;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(220,38,38,0.15);
+    }
+    .card:hover::before { transform: scaleX(1); }
+    .card-icon {
+      font-size: 32px;
+      margin-bottom: 12px;
+      display: block;
+    }
+    .card-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 24px; font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+    .card-desc {
+      font-size: 15px; color: #999;
+      line-height: 1.5;
+    }
+    .card-arrow {
+      position: absolute;
+      right: 24px; top: 50%;
+      transform: translateY(-50%);
+      font-size: 24px; color: #DC2626;
+      opacity: 0;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    .card:hover .card-arrow {
+      opacity: 1;
+      transform: translateY(-50%) translateX(4px);
+    }
+    .tag {
+      display: inline-block;
+      padding: 3px 10px;
+      background: rgba(220,38,38,0.15);
+      color: #DC2626;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      border-radius: 3px;
+      margin-bottom: 12px;
+    }
+    footer {
+      text-align: center;
+      padding: 24px;
+      color: #333;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-top: 1px solid #151515;
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <div class="badge">W</div>
+    <div class="club-name">Warrior Girls SC</div>
+    <h1>Tactical Hub</h1>
+    <p class="subtitle">Tools for our players — learn your position, role, and how we play</p>
+  </div>
+
+  <div class="cards">
+    <a href="formation-guide.html" class="card">
+      <span class="tag">Interactive</span>
+      <span class="card-icon">⚽</span>
+      <div class="card-title">4-3-3 Formation Guide</div>
+      <div class="card-desc">
+        Tap any player to learn your role in attack and defense. Includes team shape slider, passing triangles, and coaching points for every position.
+      </div>
+      <span class="card-arrow">→</span>
+    </a>
+
+    <a href="formation-visualizer.html" class="card">
+      <span class="tag">Interactive</span>
+      <span class="card-icon">📋</span>
+      <div class="card-title">Formation Visualizer</div>
+      <div class="card-desc">
+        See how our formation shifts between attack and defense phases with animated player movement and tactical overlays.
+      </div>
+      <span class="card-arrow">→</span>
+    </a>
+  </div>
+
+  <footer>
+    Warrior Girls SC &bull; FC Tippecanoe &bull; Buckeye Premier League
+  </footer>
+</body>
+</html>
